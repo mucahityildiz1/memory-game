@@ -1,0 +1,131 @@
+@import url(/assets/css/reset.css);
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.76px;
+  color: #152938;
+}
+
+.header-btn button {
+  padding: 10px 18.5px;
+  background-color: #fda214;
+  border-radius: 26px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.84px;
+  text-align: center;
+  color: #fcfcfc;
+}
+
+.memory-game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: 12px;
+  margin-bottom: 102px;
+}
+
+.box {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #304859;
+  border-radius: 50%;
+  font-size: 40px;
+  color: transparent;
+  user-select: none;
+}
+
+.box.active {
+  background-color: #bcced9;
+  color: initial;
+  pointer-events: none;
+}
+
+.box.matched {
+  pointer-events: none;
+  background-color: #fda214;
+  color: initial;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.score h1 {
+  background-color: #dfe7ec;
+  border-radius: 5px;
+  padding: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29.76px;
+  text-align: center;
+  color: #304859;
+}
+
+@media screen and (min-width: 767.98px) {
+  .container {
+    padding: 37px 40px 48px 39px;
+  }
+  .header {
+    margin-bottom: 157px;
+  }
+  .header h1 {
+    font-size: 40px;
+    line-height: 49.6px;
+  }
+  .header-btn {
+    display: flex;
+    gap: 16px;
+  }
+  .header-btn button {
+    padding: 13px 29px 14px 28px;
+  }
+  .memory-game-container {
+    margin-bottom: 126px;
+    gap: 20px;
+    padding-inline: 80px;
+  }
+  .box {
+    width: 118px;
+    height: 118px;
+  }
+  .score {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1110px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 70px 165px;
+  }
+}
